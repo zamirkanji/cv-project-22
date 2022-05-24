@@ -60,6 +60,7 @@ code {
   flex-direction: column;
   gap: 15px;
   /* border: 1px solid blue; */
+  margin: 25px;
   padding: 1em;
   background-color: black;
 }
@@ -71,7 +72,7 @@ code {
   flex-direction: column;
   gap: 25px;
   /* border: 1px solid yellow; */
-  width: 350px;
+  width: 300px;
 }
 
 .Form-input {
@@ -84,7 +85,7 @@ code {
 .App-general, .App-education, .App-experience {
   background-color: #282c34;
   /* border: 1px solid red; */
-  padding: 1em;
+  /* padding: 1em; */
   flex: 1;
   font-size: 1.25em;
   display: flex;
@@ -127,8 +128,8 @@ input {
 }
 
 textarea {
-  max-width: 350px;
-  min-width: 350px;
+  max-width: 300px;
+  min-width: 300px;
   max-height: 250px;
   min-height: 75px;
 }
