@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
+import General from './components/General';
+import Education from './components/Education';
+import Experience from './components/Experience';
+import Preview from './components/Preview';
+import './styles/index.css'
+
+function Item (props) {
+  return (
+      <>
+          <label htmlFor={props.for}>{props.labelText}: </label>
+          <input 
+              // onChange={props}   
+              // value={props}
+              name={props.name} 
+              type={props.type} 
+              id={props.id}
+              required
+          />
+      </>
+  )
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='App-header'>
+        <Header />
+      </div>
+      <div className='App-forms-container'>
+        <div className='App-general'>
+          <General />
+        </div>
+        <div className='App-education'>
+          <Education />
+        </div>
+        <div className='App-experience'>
+          <Experience />
+        </div>
+        {/* <div className='App-submit'>
+
+        </div> */}
+      </div>
+      <div className='App-preview'>
+        <Preview />
+      </div>
     </div>
   );
 }
 
 export default App;
+export {Item}

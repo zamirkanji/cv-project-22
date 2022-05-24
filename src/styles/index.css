@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  letter-spacing: .06em;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  min-height: 100%;
+}
+
+.App {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.App-header {
+  padding: 1.5em;
+  flex: .25;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* font-size: calc(10px + 2vmin); */
+  color: white;
+  border: 1px solid white;
+}
+
+.App-forms-container {
+  background-color: black;
+  flex: .75;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  color: white;
+}
+
+
+.Education-form-container, .General-form-container, .Experience-form-container {
+  
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  /* border: 1px solid yellow; */
+  width: 300px;
+}
+
+.Form-input {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid orangered; */
+}
+
+
+.App-general, .App-education, .App-experience {
+  background-color: #282c34;
+  /* border: 1px solid red; */
+  padding: 1em;
+  flex: 1;
+  font-size: 1.25em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-preview {
+  /* border: 1px solid green; */
+  flex: .25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  background-color: black;
+}
+
+input {
+  /* border: 1px solid black; */
+  padding: .5em;
+}
+
+.Form-submit {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* border: 1px solid blue; */
+}
+
+.Submit-button, .Preview-button {
+  border: none;
+  background-color: darkcyan;
+  padding: .75em;
+}
+
