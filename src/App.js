@@ -12,16 +12,22 @@ function Item (props) {
           <input 
               // onChange={props}   
               // value={props}
+              placeholder={props.placeHolder ? props.placeHolder : null}
               name={props.name} 
               type={props.type} 
               id={props.id}
               required
+              autoComplete='on'
           />
       </>
   )
 }
 
 function App() {
+  const submitValues = (e) => {
+    console.log(e);
+  }
+
   return (
     <div className="App">
       <div className='App-header'>

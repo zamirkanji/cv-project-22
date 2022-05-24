@@ -32,8 +32,6 @@ code {
   height: 100%;
   display: flex;
   flex-direction: column;
-  /* justify-content: center;
-  align-items: center; */
 }
 
 .App-header {
@@ -45,18 +43,25 @@ code {
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* font-size: calc(10px + 2vmin); */
   color: white;
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 
 .App-forms-container {
-  background-color: black;
   flex: .75;
   display: flex;
   flex-direction: column;
-  padding: 1em;
   color: white;
+  /* border: 1px solid red; */
+}
+
+.General-container, .Education-container, .Experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* border: 1px solid blue; */
+  padding: 1em;
+  background-color: black;
 }
 
 
@@ -66,7 +71,7 @@ code {
   flex-direction: column;
   gap: 25px;
   /* border: 1px solid yellow; */
-  width: 300px;
+  width: 350px;
 }
 
 .Form-input {
@@ -95,7 +100,7 @@ code {
   justify-content: center;
   align-items: center;
   padding: 1em;
-  background-color: black;
+  background-color: #282c34;
 }
 
 input {
@@ -112,7 +117,19 @@ input {
 
 .Submit-button, .Preview-button {
   border: none;
-  background-color: darkcyan;
+  background-color: rgb(109, 160, 218);
   padding: .75em;
+}
+
+.Section-title {
+  font-size: 1.25em;
+  text-align: center;
+}
+
+textarea {
+  max-width: 350px;
+  min-width: 350px;
+  max-height: 250px;
+  min-height: 75px;
 }
 
