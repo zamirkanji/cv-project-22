@@ -4,14 +4,25 @@ import Education from './components/Education';
 import Experience from './components/Experience';
 import Preview from './components/Preview';
 import './styles/index.css'
+import { useState } from 'react';
 
 function Item (props) {
+
+  const [input, setInput] = useState('');
+
+  const getInput = e => {
+    try {
+        setInput(e.target.value)
+    } catch (e) {
+        console.log(e);
+    }
+}
   return (
       <>
           <label htmlFor={props.for}>{props.labelText}: </label>
           <input 
-              // onChange={props}   
-              // value={props}
+              onChange={getInput}   
+              value={input}
               placeholder={props.placeHolder ? props.placeHolder : null}
               name={props.name} 
               type={props.type} 
@@ -23,7 +34,10 @@ function Item (props) {
   )
 }
 
+
 function App() {
+  const [generalInfo, setGeneralInfo] = useState();
+
   const submitValues = (e) => {
     console.log(e);
   }
@@ -35,7 +49,7 @@ function App() {
       </div>
       <div className='App-forms-container'>
         <div className='App-general'>
-          <General />
+          <General value={submitValues} />
         </div>
         <div className='App-education'>
           <Education />
