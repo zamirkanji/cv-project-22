@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { Item } from "../App"
+// import { Item } from "../App"
+import Item from "./Item"
 import Submit from "./Submit"
 
 export default function Education (props) {

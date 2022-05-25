@@ -1,4 +1,5 @@
-import { Item } from "../App"
+// import { Item } from "../App"
+import Item from "./Item"
 import Submit from "./Submit"
 
 export default function General (props) {
