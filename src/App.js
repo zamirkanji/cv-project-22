@@ -12,6 +12,12 @@ function App() {
   const [educationInfo, setEducationInfo] = useState([]);
   const [input, setInput] = useState('');
 
+  const clearForms = () => {
+    setGeneralInfo([]);
+    setExperienceInfo([]);
+    setEducationInfo([]);
+  }
+
   const getInput = e => {
     try {
         setInput(e.target.value)
@@ -19,6 +25,7 @@ function App() {
         console.log(e);
     }
   }
+
 
   const submitValues = (e) => {
     console.log(e);
@@ -31,7 +38,7 @@ function App() {
       </div>
       <div className='App-forms-container'>
         <div className='App-general'>
-          <General getInput={getInput} setGeneralInfo={setGeneralInfo} />
+          <General input={input} getInput={getInput} setInput={setInput} setGeneralInfo={setGeneralInfo} />
         </div>
         <div className='App-education'>
           <Education getInput={getInput} setEducationInfo={setEducationInfo}/>

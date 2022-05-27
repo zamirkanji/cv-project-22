@@ -4,7 +4,7 @@ export default function Item (props) {
             <label htmlFor={props.for}>{props.labelText}: </label>
             <input 
                 onChange={props.getInput}   
-                // value={input}
+                value={props.input}
                 placeholder={props.placeHolder ? props.placeHolder : null}
                 name={props.name} 
                 type={props.type} 
