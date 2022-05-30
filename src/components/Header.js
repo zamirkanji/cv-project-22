@@ -1,8 +1,8 @@
-export default function Header () {
+export default function Header ({h1, p}) {
     return (
-        <div>
-            <h1>Create your CV!</h1>
-            <p>Fill out the form below, and don't forget to preview.</p>
+        <div className="App-header">
+            <h1>{h1}</h1>
+            <p>{p}</p>
         </div>
     )
 }

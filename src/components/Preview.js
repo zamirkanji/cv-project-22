@@ -1,5 +1,8 @@
-export default function Preview () {
+export default function Preview ({input}) {
+    console.log(input);
     return (
-        <button type="button" className="Preview-button">Preview</button>
+        <div className="Preview-container" style={{}}>
+
+        </div>
     )
 }

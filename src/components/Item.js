@@ -1,40 +1,30 @@
-export default function Item (props) {
+export default function Item ({forhtml, labelText, disabled, onChange, value, placeHolder, name, type, id}) {
     return (
         <>
-            <label htmlFor={props.for}>{props.labelText}: </label>
-            {props.disabled === false ? 
+            <label htmlFor={forhtml}>{labelText}: </label>
+            {disabled === false ? 
                 <input 
-                    onChange={props.onChange}   
-                    value={props.value}
-                    placeholder={props.placeHolder ? props.placeHolder : null}
-                    name={props.name} 
-                    type={props.type} 
-                    id={props.id}
+                    onChange={onChange}   
+                    value={value}
+                    placeholder={placeHolder ? placeHolder : null}
+                    name={name} 
+                    type={type} 
+                    id={id}
                     required
                     autoComplete='on'
                 /> :
                 <input 
-                    onChange={props.onChange}   
-                    value={props.value}
-                    placeholder={props.placeHolder ? props.placeHolder : null}
-                    name={props.name} 
-                    type={props.type} 
-                    id={props.id}
+                    onChange={onChange}   
+                    value={value}
+                    placeholder={placeHolder ? placeHolder : null}
+                    name={name} 
+                    type={type} 
+                    id={id}
                     required
                     autoComplete='on'
                     disabled
                 />
             }
-            {/* <input 
-                onChange={props.onChange}   
-                value={props.value}
-                placeholder={props.placeHolder ? props.placeHolder : null}
-                name={props.name} 
-                type={props.type} 
-                id={props.id}
-                required
-                autoComplete='on'
-            /> */}
         </>
     )
   }
