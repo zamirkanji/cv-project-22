@@ -1,10 +1,6 @@
-import { useState } from "react"
 import Item from "./Item"
 
 export default function General ({input, handleSubmit, handleChange, generalHandleSubmit, generalHandleInput, generalFormSubmitted, generalInputDisabled}) {
-    // const [generalFormSubmitted, setGeneralFormSubmitted] = useState(false);
-    // const [generalInputDisabled, setGeneralInputDisabled] = useState(false);
-    // const [generalEditButtonHandler, setGeneralEditButtonHandler] = useState(false);
     return (
         <div className="General-container">
             <h3 className="Section-title">General Info</h3>

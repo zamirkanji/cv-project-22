@@ -5,6 +5,7 @@ import Experience from './components/Experience';
 import Preview from './components/Preview';
 import './styles/index.css'
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 function App() { 
   const [generalFormSubmitted, setGeneralFormSubmitted] = useState(false);
@@ -14,20 +15,25 @@ function App() {
   const [educationFormSubmitted, setEducationFormSubmitted] = useState(false);
   const [educationInputDisabled, setEducationInputDisabled] = useState(false);
 
+  const [preview, setPreview] = useState([]);
   const [input, setInputs] = useState({});
+
+  // useEffect(() => {
+  //   console.log('application rendered');
+  // }, []);
 
   const clearForms = () => {
     setInputs({});
     educationHandleInput();
     generalHandleInput();
     experienceHandleInput();
-    console.log(input);
   }
 
   const educationHandleSubmit = () => {
     setEducationFormSubmitted(true);
     setEducationInputDisabled(true);
     console.log(input);
+    console.log(preview);
   }
 
   const educationHandleInput = () => {
@@ -39,6 +45,7 @@ function App() {
     setGeneralFormSubmitted(true);
     setGeneralInputDisabled(true);
     console.log(input);
+    console.log(preview);
   }
 
   const generalHandleInput = () => {
@@ -50,6 +57,7 @@ function App() {
     setExperienceFormSubmitted(true);
     setExperienceInputDisabled(true);
     console.log(input);
+    console.log(preview);
   }
 
   const experienceHandleInput = () => {
@@ -61,6 +69,9 @@ function App() {
     const name = e.target.name;
     const value = e.target.value;
     setInputs(values => ({...values, [name]: value}))
+    setPreview([
+      input
+    ])
   }
   
   const handleSubmit = (e) => {

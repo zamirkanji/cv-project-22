@@ -8,6 +8,11 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-border-horizontal-spacing: 0px;
   -webkit-border-vertical-spacing: 0px;
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+  text-size-adjust: 100%;
+  /* font-size: 16px; */
 }
 
 html {
@@ -51,6 +56,10 @@ code {
   color: white;
   gap: 5px;
 }
+
+/* #App-paragraph {
+  color: rgba(88, 176, 223, 0.738);
+} */
 
 .App-forms-container {
   flex: .75;
@@ -100,14 +109,14 @@ code {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1em;
-  background-color: #282c34;
-  background-color:rgb(28, 31, 37);
+  padding: 1.5em;
+  background-color: #14151a;
   gap: 25px;
 }
 
 input {
   padding: .5em;
+  /* font-size: 16px; */
 }
 
 .Form-submit {
@@ -117,18 +126,22 @@ input {
   gap: 15px;
 }
 
-.Submit-button, .Preview-button {
+.Submit-button, .Preview-button, input[type=submit] {
   border: none;
   background-color: rgb(20, 158, 202);
+  background-color: rgba(88, 176, 223, 0.738);
   padding: .75em;
   color: black;
+  cursor: pointer;
 }
 
 .Edit-button {
   border: none;
   background-color: rgb(20, 158, 202);
+  background-color: rgba(88, 176, 223, 0.738);
   padding: .75em;
   color: black;
+  cursor: pointer;
 }
 
 .Submit-button:disabled, .Edit-button:disabled {
@@ -136,16 +149,16 @@ input {
 }
 
 .Preview-button {
-  background-color: #14151a;
+  /* background-color: #14151a; */
+  background-color: rgba(88, 175, 223, 0.1);
   color: white;
 }
 
 .Section-title {
   font-size: 1.25em;
   text-align: center;
-  color: rgb(20, 156, 202);
+  color: rgba(88, 176, 223, 0.738);
 }
-
 
 .textarea-input-container {
   display: flex;

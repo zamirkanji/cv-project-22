@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Item from "./Item"
 
 export default function Education ({input, handleChange, handleSubmit, educationHandleSubmit, educationHandleInput, educationFormSubmitted, educationInputDisabled}) { 
