@@ -102,6 +102,7 @@ code {
   align-items: center;
   padding: 1em;
   background-color: #282c34;
+  gap: 15px;
 }
 
 input {
@@ -113,6 +114,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  gap: 15px;
   /* border: 1px solid blue; */
 }
 

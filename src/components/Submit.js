@@ -1,10 +1,7 @@
-export default function Submit ({setInput}) {
+export default function Submit ({disabled} = null) {
     return (
-        <input type="submit" className="Submit-button" value={'Submit'} onClick={(e) => {
-            e.preventDefault();
-            setInput(
-                // [...]
-            )
-        }}/>
+        <div className="Form-submit">
+            <input type="submit" className="Submit-button" value={'Submit'} disabled/>
+        </div>
     )
 }

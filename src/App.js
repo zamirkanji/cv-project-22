@@ -7,28 +7,40 @@ import './styles/index.css'
 import { useState } from 'react';
 
 function App() {
-  const [generalInfo, setGeneralInfo] = useState([]);
+  
   const [experienceInfo, setExperienceInfo] = useState([]);
   const [educationInfo, setEducationInfo] = useState([]);
-  const [input, setInput] = useState('');
+  // const [generalInfo, setGeneralInfo] = useState([]);
+
+  const [input, setInputs] = useState({});
 
   const clearForms = () => {
-    setGeneralInfo([]);
-    setExperienceInfo([]);
-    setEducationInfo([]);
+    // setGeneralInfo([]);
+    // setExperienceInfo([]);
+    // setEducationInfo([]);
+
+    setInputs({});
   }
 
-  const getInput = e => {
-    try {
-        setInput(e.target.value)
-    } catch (e) {
-        console.log(e);
-    }
+  const [submitted, setSubmitted] = useState(false);
+  const [inputDisabled, setInputDisabled] = useState(false);
+  
+  const handleChange = e => {
+      const name = e.target.name;
+      const value = e.target.value;
+      setInputs(values => ({...values, [name]: value}))
+  }
+  
+  const handleSubmit = (e) => {
+      e.preventDefault();
+      setSubmitted(true);
+      setInputDisabled(true);
+      console.log(input);
   }
 
-
-  const submitValues = (e) => {
-    console.log(e);
+  const editButtonHandler = () => {
+      setSubmitted(false);
+      setInputDisabled(false);
   }
 
   return (
@@ -38,16 +50,47 @@ function App() {
       </div>
       <div className='App-forms-container'>
         <div className='App-general'>
-          <General input={input} getInput={getInput} setInput={setInput} setGeneralInfo={setGeneralInfo} />
+          <General 
+            input={input} 
+            setInputs={setInputs} 
+            submitted={submitted} 
+            setSubmitted={setSubmitted} 
+            inputDisabled={inputDisabled} 
+            setInputDisabled={setInputDisabled} 
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
+            editButtonHandler={editButtonHandler}
+          />
         </div>
         <div className='App-education'>
-          <Education getInput={getInput} setEducationInfo={setEducationInfo}/>
+          <Education 
+            input={input} 
+            setInputs={setInputs} 
+            submitted={submitted} 
+            setSubmitted={setSubmitted} 
+            inputDisabled={inputDisabled} 
+            setInputDisabled={setInputDisabled} 
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
+            editButtonHandler={editButtonHandler}
+          />
         </div>
         <div className='App-experience'>
-          <Experience getInput={getInput} setExperienceInfo={setExperienceInfo}/>
+          <Experience 
+            input={input} 
+            setInputs={setInputs} 
+            submitted={submitted} 
+            setSubmitted={setSubmitted} 
+            inputDisabled={inputDisabled} 
+            setInputDisabled={setInputDisabled} 
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
+            editButtonHandler={editButtonHandler}
+          />
         </div>
       </div>
       <div className='App-preview'>
+        <button type='button' className='Submit-button' onClick={clearForms}>Clear All Forms</button>
         <Preview />
       </div>
     </div>
@@ -55,4 +98,3 @@ function App() {
 }
 
 export default App;
-// export {Item}
